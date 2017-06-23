@@ -128,6 +128,9 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 # Disable dex2oat debug
 USE_DEX2OAT_DEBUG := false
 
+# Disable dexpreopt debug info
+WITH_DEXPREOPT_DEBUG_INFO := false
+
 # Enable whole-program R8 Java optimizations for SystemUI and system_server,
 # but also allow explicit overriding for testing and development.
 SYSTEM_OPTIMIZE_JAVA ?= true
