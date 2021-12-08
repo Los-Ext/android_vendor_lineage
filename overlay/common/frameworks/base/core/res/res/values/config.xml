@@ -210,4 +210,7 @@
 
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
+
+    <!-- Suppress Intent Filter Verification Service crashes -->
+    <string translatable="false" name="config_appsNotReportingCrashes">com.android.statementservice</string>
 </resources>
