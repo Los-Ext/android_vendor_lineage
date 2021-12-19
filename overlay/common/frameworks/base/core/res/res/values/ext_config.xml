@@ -20,5 +20,5 @@
     <bool name="config_keyboardVibrationSettingsSupported">true</bool>
 
     <!-- Suppress Intent Filter Verification Service crashes -->
-    <string translatable="false" name="config_appsNotReportingCrashes">com.android.statementservice</string>
+    <string translatable="false" name="config_appsNotReportingCrashes">com.android.statementservice,com.android.systemui</string>
 </resources>
