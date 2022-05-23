@@ -1,3 +1,7 @@
+# Blurs
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.launcher.blur.appLaunch=0
+
 # GApps
 ifeq ($(WITH_GMS),true)
 $(call inherit-product-if-exists, vendor/google/gms/config.mk)
