@@ -84,6 +84,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.arm64.memtag.app.com.android.nfc=off \
     persist.arm64.memtag.system_server=off
 
+# Music player
+PRODUCT_PACKAGES += \
+    Accord
+
 # Omni
 PRODUCT_PACKAGES += \
     OmniJaws
