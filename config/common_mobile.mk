@@ -17,6 +17,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     AvatarPicker \
     Backgrounds \
+    GameSpace \
     Glimpse \
     LatinIME
 
