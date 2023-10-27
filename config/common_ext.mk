@@ -27,6 +27,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.input.video_enabled=false
 
+# GameSpace
+PRODUCT_PACKAGES += \
+    GameSpace
+
 # GApps
 ifeq ($(WITH_GMS),true)
 # Don't dexpreopt prebuilts
