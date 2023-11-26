@@ -53,3 +53,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.arm64.memtag.app.com.google.android.bluetooth=off \
     persist.arm64.memtag.app.com.android.nfc=off \
     persist.arm64.memtag.system_server=off
+
+# Omni
+PRODUCT_PACKAGES += \
+    OmniJaws
