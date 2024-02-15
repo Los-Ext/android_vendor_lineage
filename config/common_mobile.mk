@@ -16,6 +16,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Apps
 PRODUCT_PACKAGES += \
     Backgrounds \
+    GameSpace \
     Glimpse
 
 ifeq ($(PRODUCT_TYPE), go)
