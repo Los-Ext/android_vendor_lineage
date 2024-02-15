@@ -17,7 +17,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     Backgrounds \
     Glimpse \
-    LatinIME
+    LatinIME \
+    GameSpace \
+    OmniJaws
 
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
