@@ -254,6 +254,10 @@ PRODUCT_PACKAGES += \
     LineageSetupWizard
 endif
 
+# Workaround AOSP AM crash
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.fflag.override.settings_enable_monitor_phantom_procs=false
+
 include vendor/lineage/config/version.mk
 
 -include vendor/lineage-priv/keys/keys.mk
