@@ -114,16 +114,9 @@ PRODUCT_PACKAGES += \
     build-manifest
 
 # Lineage packages
-ifeq ($(PRODUCT_IS_ATV),)
-PRODUCT_PACKAGES += \
-    ExactCalculator \
-    Jelly
-endif
-
 ifeq ($(PRODUCT_IS_AUTOMOTIVE),)
 PRODUCT_PACKAGES += \
-    LineageParts \
-    LineageSetupWizard
+    LineageParts
 endif
 
 PRODUCT_PACKAGES += \
@@ -246,9 +239,22 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/crowdin/overlay
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/lineage/build/target/product/security/lineage
 
+ifeq ($(WITH_GMS),true)
+BUILD_GOOGLE_CONTACTS := true
+BUILD_GOOGLE_DIALER := true
+BUILD_GOOGLE_MESSAGE := true
+$(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
+else
+PRODUCT_PACKAGES += \
+    ExactCalculator \
+    Jelly \
+    Eleven \
+    Etar \
+    LineageSetupWizard
+endif
+
 include vendor/lineage/config/version.mk
 
 -include vendor/lineage-priv/keys/keys.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
--include vendor/lineage/config/partner_gms.mk
