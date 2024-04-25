@@ -5,8 +5,6 @@ PRODUCT_SIZE := full
 
 # Apps
 PRODUCT_PACKAGES += \
-    Eleven \
-    Etar \
     Profiles \
     Recorder \
     Seedvault
