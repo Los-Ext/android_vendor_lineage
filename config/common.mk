@@ -250,6 +250,8 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/crowdin/overlay
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/lineage/build/target/product/security/lineage
 
+# Prebuilt GAPPS
+WITH_GMS ?= true
 ifeq ($(WITH_GMS),true)
 BUILD_GOOGLE_CONTACTS := true
 BUILD_GOOGLE_DIALER := true
