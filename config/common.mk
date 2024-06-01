@@ -251,10 +251,14 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/lineage/build/target/product/security/lineage
 
 ifeq ($(WITH_GMS),true)
+ifeq ($(WITH_GMS_FULL),true)
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+else
 BUILD_GOOGLE_CONTACTS := true
 BUILD_GOOGLE_DIALER := true
 BUILD_GOOGLE_MESSAGE := true
 $(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
+endif
 else
 PRODUCT_PACKAGES += \
     ExactCalculator \
