@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     GameSpace \
     OmniJaws
 
+ifneq ($(WITH_GMS_FULL),true)
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
     TrebuchetQuickStepGo
@@ -37,6 +38,7 @@ endif
 
 PRODUCT_PACKAGES += \
     TrebuchetOverlay
+endif
 
 # Charger
 PRODUCT_PACKAGES += \
