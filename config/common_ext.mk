@@ -1,3 +1,15 @@
+# Blurs
+TARGET_ENABLE_BLUR ?= false
+ifeq ($(TARGET_ENABLE_BLUR),true)
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.custom.blur.enable=true
+else
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.custom.blur.enable=false
+endif
+
+PRODUCT_SYSTEM_PROPERTIES += ro.surface_flinger.supports_background_blur=1
+
 # Disable default frame rate limit for games
 PRODUCT_PRODUCT_PROPERTIES += \
     debug.graphics.game_default_frame_rate.disabled=true
