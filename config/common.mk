@@ -81,6 +81,12 @@ endif
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.launcher.blur.appLaunch=0
 
+TARGET_ENABLE_BLUR ?= false
+ifeq ($(TARGET_ENABLE_BLUR),true)
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.custom.blur.enable=true
+endif
+
 # Lineage-specific broadcast actions whitelist
 PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/lineage-sysconfig.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lineage-sysconfig.xml
