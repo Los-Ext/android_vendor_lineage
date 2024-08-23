@@ -284,6 +284,7 @@ PRODUCT_PACKAGES += \
     LineageSetupWizard
 endif
 
+include vendor/lineage/config/props.mk
 include vendor/lineage/config/version.mk
 
 -include vendor/lineage-priv/keys/keys.mk
