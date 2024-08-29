@@ -78,7 +78,7 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     ThemesStub
 
-ifeq ($(TARGET_SUPPORTS_64_BIT_APPS),true)
+ifneq ($(TARGET_FACE_UNLOCK_SUPPORTED),false)
 PRODUCT_PACKAGES += \
     FaceUnlock
 
