@@ -84,6 +84,7 @@ PRODUCT_COPY_FILES += \
 endif
 endif
 
+TARGET_BUILD_DEVICE_AS_WEBCAM =? true
 # DeviceAsWebcam
 ifeq ($(TARGET_BUILD_DEVICE_AS_WEBCAM), true)
     PRODUCT_PACKAGES += \
