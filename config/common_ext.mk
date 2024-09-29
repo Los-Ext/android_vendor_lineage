@@ -52,6 +52,11 @@ endif
 # low end art
 LOW_RAM_ART ?= false
 
+# LMODroid Apps
+PRODUCT_PACKAGES += \
+    LMOFreeform \
+    LMOFreeformSidebar
+
 # Memtag
 PRODUCT_PRODUCT_PROPERTIES += \
     arm64.memtag.process.system_server=off \
