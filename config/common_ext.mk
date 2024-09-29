@@ -46,6 +46,11 @@ PRODUCT_PACKAGES += \
     LineageSetupWizard
 endif
 
+# LMODroid Apps
+PRODUCT_PACKAGES += \
+    LMOFreeform \
+    LMOFreeformSidebar
+
 # Memtag
 PRODUCT_PRODUCT_PROPERTIES += \
     arm64.memtag.process.system_server=off \
