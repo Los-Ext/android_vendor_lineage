@@ -20,6 +20,8 @@ PRODUCT_PACKAGES += \
     GameSpace \
     Glimpse \
     LatinIME \
+    LMOFreeform \
+    LMOFreeformSidebar \
     OmniJaws
 
 ifeq ($(PRODUCT_TYPE), go)
