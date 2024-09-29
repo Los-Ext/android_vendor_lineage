@@ -21,6 +21,11 @@ PRODUCT_PACKAGES += \
     Glimpse \
     LatinIME
 
+# LMO
+PRODUCT_PACKAGES += \
+    LMOFreeform \
+    LMOFreeformSidebar
+
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
     Launcher3QuickStepGo
