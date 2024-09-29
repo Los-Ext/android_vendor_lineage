@@ -70,3 +70,8 @@ PRODUCT_PACKAGES += \
     Etar \
     LineageSetupWizard
 endif
+
+# LMODroid Apps
+PRODUCT_PACKAGES += \
+    LMOFreeform \
+    LMOFreeformSidebar
