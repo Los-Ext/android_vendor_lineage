@@ -34,9 +34,6 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3QuickStep
 endif
 
-PRODUCT_PACKAGES += \
-    TrebuchetOverlay
-
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
