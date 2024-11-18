@@ -307,6 +307,8 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 ifeq ($(WITH_GMS),true)
 $(call inherit-product-if-exists, vendor/google/gms/config.mk)
 $(call inherit-product-if-exists, vendor/google/pixel/config.mk)
+PRODUCT_COPY_FILES += \
+    vendor/lineage/config/permissions/gapps-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/gapps-permissions.xml
 else
 PRODUCT_PACKAGES += \
     ExactCalculator \
