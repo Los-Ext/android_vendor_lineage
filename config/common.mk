@@ -274,6 +274,8 @@ BUILD_GOOGLE_CONTACTS ?= true
 BUILD_GOOGLE_DIALER ?= true
 BUILD_GOOGLE_MESSAGE ?= true
 $(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
+PRODUCT_COPY_FILES += \
+    vendor/lineage/config/permissions/gapps-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/gapps-permissions.xml
 endif
 else
 PRODUCT_PACKAGES += \
