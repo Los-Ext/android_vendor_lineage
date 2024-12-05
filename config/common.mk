@@ -268,6 +268,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/crowdin/overlay
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/lineage/build/target/product/security/lineage
 
+CUSTOM_SECURITY_PATCH := 2024-12-01
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.custom.security.patch=$(CUSTOM_SECURITY_PATCH)
+
 include vendor/lineage/config/version.mk
 
 -include vendor/lineage-priv/keys/keys.mk
