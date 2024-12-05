@@ -3,7 +3,7 @@ PRODUCT_VERSION_MINOR = 0
 LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
 
 ifeq ($(LINEAGE_VERSION_APPEND_TIME_OF_DAY),true)
-    LINEAGE_BUILD_DATE := $(shell date -u +%Y%m%d_%H%M%S)
+    LINEAGE_BUILD_DATE := $(shell date -u +%Y%m%d-%H%M%S)
 else
     LINEAGE_BUILD_DATE := $(shell date -u +%Y%m%d)
 endif
