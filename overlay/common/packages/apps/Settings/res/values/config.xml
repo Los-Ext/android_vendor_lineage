@@ -42,4 +42,6 @@
 
     <!-- Whether to display Cloned Apps page in Settings (Settings > Apps > Cloned Apps).-->
     <bool name="config_cloned_apps_page_enabled">true</bool>
+
+    <item name="config_activity_embed_split_ratio" format="float" type="dimen">0.5</item>
 </resources>
