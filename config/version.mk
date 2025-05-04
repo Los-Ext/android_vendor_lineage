@@ -22,3 +22,8 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.lineage.display.version=$(LINEAGE_DISPLAY_VERSION) \
     ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
     ro.lineage.releasetype=$(LINEAGE_BUILDTYPE)
+
+LINEAGE_DEBUGGING_ENABLED ?= false
+# AxionOS properties
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.sys.lineage_debug_enabled=$(LINEAGE_DEBUGGING_ENABLED)
