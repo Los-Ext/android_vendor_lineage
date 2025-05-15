@@ -75,6 +75,9 @@ TARGET_ENABLE_BLUR ?= false
 ifeq ($(TARGET_ENABLE_BLUR),true)
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.custom.blur.enable=true
+else
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.custom.blur.enable=false
 endif
 
 # Lineage-specific broadcast actions whitelist
