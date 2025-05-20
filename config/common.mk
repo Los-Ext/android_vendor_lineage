@@ -90,6 +90,8 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.custom.blur.enable=false
 endif
 
+PRODUCT_SYSTEM_PROPERTIES += ro.surface_flinger.supports_background_blur=1
+
 # Lineage-specific broadcast actions whitelist
 PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/lineage-sysconfig.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lineage-sysconfig.xml
