@@ -60,4 +60,7 @@
     <!-- Time (in ms) to delay the bouncer views from showing when passive auth may be used for
     device entry. -->
     <integer name="primary_bouncer_passive_auth_delay">0</integer>
+
+    <!-- vibrate On Icon Animation -->    
+    <bool name="config_vibrateOnIconAnimation" translatable="false">false</bool>
 </resources>
