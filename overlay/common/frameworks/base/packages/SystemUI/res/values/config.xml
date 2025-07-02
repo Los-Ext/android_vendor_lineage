@@ -67,4 +67,7 @@
 
     <!-- vibrate On Icon Animation -->    
     <bool name="config_vibrateOnIconAnimation" translatable="false">false</bool>
+    
+    <!-- turbulence Noise -->
+    <bool name="config_turbulenceNoise" translatable="false">false</bool>
 </resources>
