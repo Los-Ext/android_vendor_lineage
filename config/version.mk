@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Versioning System
-BUILD_DATE := $(shell date +%Y%m%d)
+BUILD_DATE := $(shell date +%Y%m%d-%H%M)
 TARGET_PRODUCT_SHORT := $(subst yaap_,,$(YAAP_BUILD))
 
 YAAP_BUILDTYPE ?= HOMEMADE
