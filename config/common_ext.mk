@@ -10,6 +10,10 @@ endif
 
 PRODUCT_SYSTEM_PROPERTIES += ro.surface_flinger.supports_background_blur?=1
 
+# Boost surfaceflinger min uclamp utilization
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.surface_flinger.uclamp.min?=165
+
 # Cloned app exemption
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-crdroid-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-crdroid-product.xml
