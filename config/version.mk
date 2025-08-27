@@ -22,3 +22,8 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.lineage.display.version=$(LINEAGE_DISPLAY_VERSION) \
     ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
     ro.lineage.releasetype=$(LINEAGE_BUILDTYPE)
+
+# Axion
+PERF_ANIM_OVERRIDE ?= false
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.activity_anim_perf_override=$(PERF_ANIM_OVERRIDE)
