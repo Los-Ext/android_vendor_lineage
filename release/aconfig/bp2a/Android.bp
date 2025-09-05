@@ -18,7 +18,6 @@ aconfig_value_set {
     values: [
         "aconfig-values-bp2a-android.app-all",
         "aconfig-values-bp2a-com.android.systemui.flags-all",
-        "aconfig-values-bp2a-com.android.systemui.shared.flags-all",
         "aconfig-values-bp2a-com.android.settings.flags-all",
         "aconfig-values-bp2a-com.android.server.notification-all",
         "aconfig-values-bp2a-com.android.launcher3-all",
