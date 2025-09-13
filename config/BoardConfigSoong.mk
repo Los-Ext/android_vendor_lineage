@@ -48,6 +48,10 @@ ifneq ($(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS),)
     $(error TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS is deprecated, please migrate to soong_config_set,camera,needs_client_info_lib_oplus)
 endif
 
+ifneq ($(TARGET_CAMERA_SERVICE_EXT_LIB),)
+    $(call soong_config_set,libcameraservice,ext_lib,$(TARGET_CAMERA_SERVICE_EXT_LIB))
+endif
+
 # Charger
 lineage_charger_density := mdpi
 ifneq (,$(TARGET_SCREEN_DENSITY))
