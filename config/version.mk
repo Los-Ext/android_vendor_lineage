@@ -27,3 +27,8 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PERF_ANIM_OVERRIDE ?= false
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.activity_anim_perf_override=$(PERF_ANIM_OVERRIDE)
+
+ifeq ($(PERF_ANIM_OVERRIDE),true)
+PRODUCT_PRODUCT_PROPERTIES += \
+    debug.sf.predict_hwc_composition_strategy=0
+endif
