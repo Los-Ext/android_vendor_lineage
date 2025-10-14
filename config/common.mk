@@ -152,6 +152,8 @@ ifneq ($(TARGET_BUILD_VARIANT), eng)
     PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
     # Don't include art debug targets
     PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+    # Do not include other java mini debug info
+    PRODUCT_OTHER_JAVA_DEBUG_INFO := false
 endif
 
 # Enable whole-program R8 Java optimizations for SystemUI and system_server,
