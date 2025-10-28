@@ -287,6 +287,10 @@ PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed-profile
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed-profile
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.madvise.vdexfile.size=31457280 \
+    dalvik.vm.madvise.odexfile.size=31457280
 else
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
