@@ -22,6 +22,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     LMOFreeform \
     LMOFreeformSidebar \
+    LMOSystemUIClock \
     OmniJaws
 
 ifeq ($(PRODUCT_TYPE), go)
