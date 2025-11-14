@@ -20,8 +20,6 @@ PRODUCT_PACKAGES += \
     GameSpace \
     Glimpse \
     LatinIME \
-    LMOFreeform \
-    LMOFreeformSidebar \
     LMOSystemUIClock \
     OmniJaws
 
