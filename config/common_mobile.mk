@@ -20,8 +20,7 @@ PRODUCT_PACKAGES += \
     GameSpace \
     Glimpse \
     LatinIME \
-    LMOSystemUIClock \
-    OmniJaws
+    LMOSystemUIClock
 
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
