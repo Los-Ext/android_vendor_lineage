@@ -113,6 +113,7 @@ ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
 include vendor/lineage/config/lineage_sdk_common.mk
 endif
 
+ifneq ($(TARGET_BUILD_VARIANT), eng)
 # Disable Art debugs
 ART_BUILD_TARGET_DEBUG := false
 ART_BUILD_HOST_DEBUG := false
@@ -136,6 +137,7 @@ USE_DEX2OAT_DEBUG := false
 
 # Disable dexpreopt debug info
 WITH_DEXPREOPT_DEBUG_INFO := false
+endif
 
 # Enable whole-program R8 Java optimizations for SystemUI and system_server,
 # but also allow explicit overriding for testing and development.
