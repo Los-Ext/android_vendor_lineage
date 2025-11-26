@@ -368,7 +368,6 @@ else
 PRODUCT_PACKAGES += \
     ExactCalculator \
     Jelly \
-    Twelve \
     Etar \
     LineageSetupWizard
 endif
