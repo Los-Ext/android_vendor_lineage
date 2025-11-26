@@ -19,8 +19,7 @@ PRODUCT_PACKAGES += \
     Backgrounds \
     GameSpace \
     Glimpse \
-    LatinIME \
-    LMOSystemUIClock
+    LatinIME
 
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
