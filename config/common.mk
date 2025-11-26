@@ -135,9 +135,9 @@ ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
 include vendor/lineage/config/lineage_sdk_common.mk
 endif
 
-ART_BUILD_TARGET_NDEBUG := false
+ART_BUILD_TARGET_NDEBUG := true
 ART_BUILD_TARGET_DEBUG := false
-ART_BUILD_HOST_NDEBUG := false
+ART_BUILD_HOST_NDEBUG := true
 ART_BUILD_HOST_DEBUG := false
 
 # Flags
