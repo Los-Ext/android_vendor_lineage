@@ -276,9 +276,18 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
 endif
 endif
 
+# low end art
+LOW_RAM_ART ?= false
+ifeq ($(LOW_RAM_ART),true)
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
+# Speed profile to reduce RAM and storage
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed-profile
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    dalvik.vm.systemuicompilerfilter=speed-profile
+else
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
@@ -287,6 +296,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 PRODUCT_PRODUCT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
+endif
 
 ifeq ($(TARGET_BUILD_VARIANT),userdebug)
 PRODUCT_PRODUCT_PROPERTIES += \
