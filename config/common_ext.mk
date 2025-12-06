@@ -38,6 +38,9 @@ PRODUCT_PACKAGES += \
     LineageSetupWizard
 endif
 
+# low end art
+LOW_RAM_ART ?= false
+
 # Memtag
 PRODUCT_PRODUCT_PROPERTIES += \
     arm64.memtag.process.system_server=off \
