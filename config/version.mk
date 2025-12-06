@@ -23,6 +23,9 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
     ro.lineage.releasetype=$(LINEAGE_BUILDTYPE)
 
+# Los-Ext
+LOW_RAM_ART ?= false
+
 # Axion
 PERF_ANIM_OVERRIDE ?= false
 PRODUCT_PRODUCT_PROPERTIES += \
