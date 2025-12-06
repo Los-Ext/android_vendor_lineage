@@ -24,14 +24,8 @@ PRODUCT_PACKAGES += \
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
     Launcher3QuickStepGo
-
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Launcher3QuickStepGo
 else
 PRODUCT_PACKAGES += \
-    Launcher3QuickStep
-
-PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3QuickStep
 endif
 
