@@ -35,4 +35,6 @@
     <bool name="config_enableBurnInProtection">true</bool>
     
     <bool name="config_dreamsEnabledByDefault">false</bool>
+
+    <dimen name="config_viewConfigurationTouchSlop">6dp</dimen>
 </resources>
