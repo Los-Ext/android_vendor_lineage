@@ -27,4 +27,6 @@
     
     <!-- The amount to scale fullscreen snapshots for Overview and snapshot starting windows. -->
     <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.6</item>
+    
+    <integer name="auto_data_switch_score_tolerance">-1</integer>
 </resources>
