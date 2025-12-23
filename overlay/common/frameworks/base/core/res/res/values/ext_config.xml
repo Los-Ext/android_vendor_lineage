@@ -29,4 +29,6 @@
     <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.6</item>
     
     <integer name="auto_data_switch_score_tolerance">-1</integer>
+
+    <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
 </resources>
