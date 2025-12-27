@@ -14,7 +14,7 @@ export ADDOND_VERSION=3
 # Partitions to mount for backup/restore in V3
 export all_V3_partitions="vendor product system_ext"
 
-# Scripts in /system/addon.d expect to find backuptool.functions in /tmp
+# Scripts in /system/backup.tools expect to find backuptool.functions in /tmp
 cp -f /tmp/install/bin/backuptool.functions /tmp
 
 get_script_version() {
@@ -23,21 +23,21 @@ get_script_version() {
   echo $version
 }
 
-# Preserve /system/addon.d in /tmp/addon.d
+# Preserve /system/backup.tools in /tmp/backup.tools
 preserve_addon_d() {
-  if [ -d $S/addon.d/ ]; then
-    mkdir -p /tmp/addon.d/
-    cp -a $S/addon.d/* /tmp/addon.d/
-    chmod 755 /tmp/addon.d/*.sh
+  if [ -d $S/backup.tools/ ]; then
+    mkdir -p /tmp/backup.tools/
+    cp -a $S/backup.tools/* /tmp/backup.tools/
+    chmod 755 /tmp/backup.tools/*.sh
   fi
 }
 
-# Restore /system/addon.d from /tmp/addon.d
+# Restore /system/backup.tools from /tmp/backup.tools
 restore_addon_d() {
-  if [ -d /tmp/addon.d/ ]; then
-    mkdir -p $S/addon.d/
-    cp -a /tmp/addon.d/* $S/addon.d/
-    rm -rf /tmp/addon.d/
+  if [ -d /tmp/backup.tools/ ]; then
+    mkdir -p $S/backup.tools/
+    cp -a /tmp/backup.tools/* $S/backup.tools/
+    rm -rf /tmp/backup.tools/
   fi
 }
 
@@ -55,10 +55,10 @@ fi
 return 0
 }
 
-# Execute /system/addon.d/*.sh scripts with each $@ parameter
+# Execute /system/backup.tools/*.sh scripts with each $@ parameter
 run_stages() {
-if [ -d /tmp/addon.d/ ]; then
-  for script in $(find /tmp/addon.d/ -name '*.sh' |sort -n); do
+if [ -d /tmp/backup.tools/ ]; then
+  for script in $(find /tmp/backup.tools/ -name '*.sh' |sort -n); do
     v=$(get_script_version $script)
     if [ $v -ge 3 ]; then
       mount_extra $all_V3_partitions
