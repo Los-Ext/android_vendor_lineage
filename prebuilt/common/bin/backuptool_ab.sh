@@ -12,7 +12,7 @@ export ADDOND_VERSION=3
 # Partitions to mount for backup/restore in V3
 export all_V3_partitions="vendor product system_ext"
 
-# Scripts in /system/addon.d expect to find backuptool.functions in /tmp
+# Scripts in /system/backup.tools expect to find backuptool.functions in /tmp
 mkdir -p /postinstall/tmp/
 mountpoint /postinstall/tmp >/dev/null 2>&1 || mount -t tmpfs tmpfs /postinstall/tmp
 cp -f /postinstall/system/bin/backuptool_ab.functions /postinstall/tmp/backuptool.functions
@@ -23,29 +23,29 @@ get_script_version() {
   echo $version
 }
 
-# Preserve /system/addon.d in /tmp/addon.d
+# Preserve /system/backup.tools in /tmp/backup.tools
 preserve_addon_d() {
-  if [ -d /system/addon.d/ ]; then
-    mkdir -p /postinstall/tmp/addon.d/
-    cp -a /system/addon.d/* /postinstall/tmp/addon.d/
+  if [ -d /system/backup.tools/ ]; then
+    mkdir -p /postinstall/tmp/backup.tools/
+    cp -a /system/backup.tools/* /postinstall/tmp/backup.tools/
 
     # Discard any version 1 script, as it is not compatible with a/b
-    for f in /postinstall/tmp/addon.d/*sh; do
+    for f in /postinstall/tmp/backup.tools/*sh; do
       if [ $(get_script_version $f) = 1 ]; then
         rm $f
       fi
     done
 
-    chmod 755 /postinstall/tmp/addon.d/*.sh
+    chmod 755 /postinstall/tmp/backup.tools/*.sh
   fi
 }
 
-# Restore /postinstall/system/addon.d from /postinstall/tmp/addon.d
+# Restore /postinstall/system/backup.tools from /postinstall/tmp/backup.tools
 restore_addon_d() {
-  if [ -d /postinstall/tmp/addon.d/ ]; then
-    mkdir -p /postinstall/system/addon.d/
-    cp -a /postinstall/tmp/addon.d/* /postinstall/system/addon.d/
-    rm -rf /postinstall/tmp/addon.d/
+  if [ -d /postinstall/tmp/backup.tools/ ]; then
+    mkdir -p /postinstall/system/backup.tools/
+    cp -a /postinstall/tmp/backup.tools/* /postinstall/system/backup.tools/
+    rm -rf /postinstall/tmp/backup.tools/
   fi
 }
 
@@ -63,10 +63,10 @@ fi
 return 0
 }
 
-# Execute /system/addon.d/*.sh scripts with each $@ parameter
+# Execute /system/backup.tools/*.sh scripts with each $@ parameter
 run_stages() {
-if [ -d /postinstall/tmp/addon.d/ ]; then
-  for script in $(find /postinstall/tmp/addon.d/ -name '*.sh' |sort -n); do
+if [ -d /postinstall/tmp/backup.tools/ ]; then
+  for script in $(find /postinstall/tmp/backup.tools/ -name '*.sh' |sort -n); do
     # we have no /sbin/sh in android, only recovery
     # use /system/bin/sh here instead
     sed -i '0,/#!\/sbin\/sh/{s|#!/sbin/sh|#!/system/bin/sh|}' $script
