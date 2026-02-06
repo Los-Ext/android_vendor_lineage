@@ -8,7 +8,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.custom.blur.enable=false
 endif
 
-PRODUCT_SYSTEM_PROPERTIES += ro.surface_flinger.supports_background_blur=1
+PRODUCT_SYSTEM_PROPERTIES += ro.surface_flinger.supports_background_blur?=1
 
 # Cloned app exemption
 PRODUCT_COPY_FILES += \
