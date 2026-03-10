@@ -191,11 +191,12 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Gapps and Microg
 ifeq ($(TARGET_BUILD_GAPPS),true)
-    $(call inherit-product-if-exists, vendor/google/gms/config.mk)
+    $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+
 else ifeq ($(TARGET_BUILD_MICROG),true)
     $(call inherit-product, vendor/microg/microg.mk)
 endif
-$(call inherit-product-if-exists, vendor/google/pixel/config.mk)
+$(call inherit-product, vendor/pixel/clocks/products/clocks.mk)
 
 # Lindroid
 ifeq ($(TARGET_BUILD_LINDROID),true)
