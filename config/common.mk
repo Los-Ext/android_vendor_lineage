@@ -192,7 +192,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Gapps and Microg
 ifeq ($(TARGET_BUILD_GAPPS),true)
     $(call inherit-product-if-exists, vendor/google/gms/config.mk)
-else
+else ifeq ($(TARGET_BUILD_MICROG),true)
     $(call inherit-product, vendor/microg/microg.mk)
 endif
 $(call inherit-product-if-exists, vendor/google/pixel/config.mk)
